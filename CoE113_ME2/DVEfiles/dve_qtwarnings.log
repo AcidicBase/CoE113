@@ -1,0 +1,4 @@
+QWarning: X Error: BadWindow (invalid Window parameter) 3
+  Major opcode:  40
+  Minor opcode:  0
+  Resource id:  0xf1731c

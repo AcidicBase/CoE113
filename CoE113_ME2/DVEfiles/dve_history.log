@@ -1,0 +1,101 @@
+# Preference setting overrides
+gui_create_pref_key -category {Globals} -key {load_detail_for_funcov} -value_type {bool} -value {false}
+
+# State setting overrides
+gui_state_default_create -off -ini
+gui_create_state_key -category FindDialog -key m_pMatchCase -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pMatchWord -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pUseCombo -value_type string -value {}
+gui_create_state_key -category FindDialog -key m_pWrapAround -value_type bool -value true
+gui_state_default_create -off
+
+# Begin command logging
+gui_open_db -file /home/fransandreimmanuel.colendres/Downloads/CoE113_ME2/tb_mem.vpd -design V1
+gui_list_select -id Data.1 -selected  { tb_mem.clk   }
+gui_list_sort -id  Data.1   {Variable}
+gui_list_sort -id  Data.1   -descending  {Variable}
+gui_list_expand -id Hier.1   tb_mem
+gui_list_action -id  Hier.1 tb_mem
+gui_use_schematics 
+gui_sch_show -name tb_mem
+gui_set_pref_value -category {schem_pin_hc} -key {textExtFont} -value {Helvetica,10,-1,5,50,0,0,0,0,0}
+gui_zoom -window Schematic.1 -rect { {-25559 -4201} {35558 14268} }
+gui_zoom -window Schematic.1 -rect { {-17784 -20657} {65016 4365} }
+gui_zoom -window Schematic.1 -rect { {-17784 -20657} {65016 4365} }
+gui_zoom -window Schematic.1 -rect { {-17784 -20657} {65016 4365} }
+gui_list_select -id Data.1 -selected  { {tb_mem.wire_dout[31:0]}   }
+gui_list_select -id Data.1 -selected  { {tb_mem.wire_dout[31:0]}  {tb_mem.wire_din[31:0]}  {tb_mem.wire_addr[31:0]}  tb_mem.w_wr_en  tb_mem.nrst  {tb_mem.i[31:0]}  tb_mem.done  tb_mem.clk   }
+gui_list_select -id Data.1 -selected  {  }
+gui_list_sort -id  Data.1   -by decl
+gui_list_select -id Data.1 -selected  { tb_mem.clk   }
+gui_list_select -id Data.1 -selected  { tb_mem.clk  tb_mem.nrst  {tb_mem.wire_dout[31:0]}  {tb_mem.wire_din[31:0]}  {tb_mem.wire_addr[31:0]}  tb_mem.w_wr_en  tb_mem.done  {tb_mem.i[31:0]}   }
+gui_list_select -id Data.1 -selected  { {tb_mem.i[31:0]}   }
+gui_list_select -id Data.1 -selected  { tb_mem.clk   }
+gui_list_select -id Data.1 -selected  { tb_mem.clk  tb_mem.nrst  {tb_mem.wire_dout[31:0]}  {tb_mem.wire_din[31:0]}  {tb_mem.wire_addr[31:0]}  tb_mem.w_wr_en  tb_mem.done   }
+gui_list_expand -id Data.1 -all {<root>}
+gui_list_collapse -id  Data.1   {tb_mem.i[31:0]}
+gui_list_select -id Data.1 -selected  { tb_mem.done   }
+gui_list_collapse -id  Data.1   {tb_mem.wire_addr[31:0]}
+gui_list_collapse -id  Data.1   {tb_mem.wire_din[31:0]}
+gui_list_collapse -id  Data.1   {tb_mem.wire_dout[31:0]}
+gui_list_select -id Data.1 -selected  { tb_mem.w_wr_en   }
+gui_list_select -id Data.1 -selected  { tb_mem.done   }
+gui_list_select -id Data.1 { tb_mem.done  tb_mem.clk  tb_mem.nrst  {tb_mem.wire_dout[31:0]}  {tb_mem.wire_dout[31]}  {tb_mem.wire_dout[30]}  {tb_mem.wire_dout[29]}  {tb_mem.wire_dout[28]}  {tb_mem.wire_dout[27]}  {tb_mem.wire_dout[26]}  {tb_mem.wire_dout[25]}  {tb_mem.wire_dout[24]}  {tb_mem.wire_dout[23]}  {tb_mem.wire_dout[22]}  {tb_mem.wire_dout[21]}  {tb_mem.wire_dout[20]}  {tb_mem.wire_dout[19]}  {tb_mem.wire_dout[18]}  {tb_mem.wire_dout[17]}  {tb_mem.wire_dout[16]}  {tb_mem.wire_dout[15]}  {tb_mem.wire_dout[14]}  {tb_mem.wire_dout[13]}  {tb_mem.wire_dout[12]}  {tb_mem.wire_dout[11]}  {tb_mem.wire_dout[10]}  {tb_mem.wire_dout[9]}  {tb_mem.wire_dout[8]}  {tb_mem.wire_dout[7]}  {tb_mem.wire_dout[6]}  {tb_mem.wire_dout[5]}  {tb_mem.wire_dout[4]}  {tb_mem.wire_dout[3]}  {tb_mem.wire_dout[2]}  {tb_mem.wire_dout[1]}  {tb_mem.wire_dout[0]}  {tb_mem.wire_din[31:0]}  {tb_mem.wire_din[31]}  {tb_mem.wire_din[30]}  {tb_mem.wire_din[29]}  {tb_mem.wire_din[28]}  {tb_mem.wire_din[27]}  {tb_mem.wire_din[26]}  {tb_mem.wire_din[25]}  {tb_mem.wire_din[24]}  {tb_mem.wire_din[23]}  {tb_mem.wire_din[22]}  {tb_mem.wire_din[21]}  {tb_mem.wire_din[20]}  {tb_mem.wire_din[19]}  {tb_mem.wire_din[18]}  {tb_mem.wire_din[17]}  {tb_mem.wire_din[16]}  {tb_mem.wire_din[15]}  {tb_mem.wire_din[14]}  {tb_mem.wire_din[13]}  {tb_mem.wire_din[12]}  {tb_mem.wire_din[11]}  {tb_mem.wire_din[10]}  {tb_mem.wire_din[9]}  {tb_mem.wire_din[8]}  {tb_mem.wire_din[7]}  {tb_mem.wire_din[6]}  {tb_mem.wire_din[5]}  {tb_mem.wire_din[4]}  {tb_mem.wire_din[3]}  {tb_mem.wire_din[2]}  {tb_mem.wire_din[1]}  {tb_mem.wire_din[0]}  {tb_mem.wire_addr[31:0]}  {tb_mem.wire_addr[31]}  {tb_mem.wire_addr[30]}  {tb_mem.wire_addr[29]}  {tb_mem.wire_addr[28]}  {tb_mem.wire_addr[27]}  {tb_mem.wire_addr[26]}  {tb_mem.wire_addr[25]}  {tb_mem.wire_addr[24]}  {tb_mem.wire_addr[23]}  {tb_mem.wire_addr[22]}  {tb_mem.wire_addr[21]}  {tb_mem.wire_addr[20]}  {tb_mem.wire_addr[19]}  {tb_mem.wire_addr[18]}  {tb_mem.wire_addr[17]}  {tb_mem.wire_addr[16]}  {tb_mem.wire_addr[15]}  {tb_mem.wire_addr[14]}  {tb_mem.wire_addr[13]}  {tb_mem.wire_addr[12]}  {tb_mem.wire_addr[11]}  {tb_mem.wire_addr[10]}  {tb_mem.wire_addr[9]}  {tb_mem.wire_addr[8]}  {tb_mem.wire_addr[7]}  {tb_mem.wire_addr[6]}  {tb_mem.wire_addr[5]}  {tb_mem.wire_addr[4]}  {tb_mem.wire_addr[3]}  {tb_mem.wire_addr[2]}  {tb_mem.wire_addr[1]}  {tb_mem.wire_addr[0]}  tb_mem.w_wr_en  tb_mem.done   }
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Data.1 { tb_mem.clk tb_mem.nrst {tb_mem.wire_dout[31:0]} {tb_mem.wire_din[31:0]} {tb_mem.wire_addr[31:0]} tb_mem.w_wr_en tb_mem.done } -insertionbar
+gui_wv_zoom_timerange -id  Wave.1 0 294
+gui_wv_scroll_hslidermove -id  Wave.1 132
+gui_wv_scroll_hslidermove -id  Wave.1 264
+gui_wv_scroll_hslidermove -id  Wave.1 396
+gui_wv_scroll_hslidermove -id  Wave.1 528
+gui_wv_scroll_hslidermove -id  Wave.1 660
+gui_wv_scroll_hslidermove -id  Wave.1 792
+gui_wv_scroll_hslidermove -id  Wave.1 924
+gui_wv_scroll_hslidermove -id  Wave.1 1056
+gui_wv_scroll_hslidermove -id  Wave.1 1188
+gui_wv_scroll_hslidermove -id  Wave.1 1320
+gui_wv_scroll_hslidermove -id  Wave.1 1452
+gui_wv_scroll_hslidermove -id  Wave.1 1584
+gui_wv_scroll_hslidermove -id  Wave.1 1716
+gui_wv_scroll_hslidermove -id  Wave.1 1848
+gui_wv_scroll_hslidermove -id  Wave.1 1980
+gui_wv_scroll_hslidermove -id  Wave.1 2112
+gui_wv_scroll_hslidermove -id  Wave.1 2244
+gui_wv_scroll_hslidermove -id  Wave.1 2376
+gui_wv_scroll_hslidermove -id  Wave.1 2508
+gui_wv_scroll_hslidermove -id  Wave.1 2640
+gui_wv_scroll_hslidermove -id  Wave.1 2772
+gui_wv_scroll_hslidermove -id  Wave.1 2904
+gui_wv_scroll_hslidermove -id  Wave.1 3036
+gui_wv_scroll_hslidermove -id  Wave.1 3168
+gui_wv_scroll_hslidermove -id  Wave.1 3300
+gui_wv_scroll_hslidermove -id  Wave.1 3432
+gui_wv_scroll_hslidermove -id  Wave.1 3696
+gui_wv_scroll_hslidermove -id  Wave.1 3828
+gui_wv_scroll_hslidermove -id  Wave.1 3960
+gui_wv_scroll_hslidermove -id  Wave.1 4224
+gui_wv_scroll_hslidermove -id  Wave.1 4356
+gui_wv_scroll_hslidermove -id  Wave.1 4488
+gui_wv_scroll_hslidermove -id  Wave.1 4752
+gui_wv_scroll_hslidermove -id  Wave.1 4884
+gui_wv_scroll_hslidermove -id  Wave.1 5016
+gui_wv_scroll_hslidermove -id  Wave.1 5148
+gui_wv_scroll_hslidermove -id  Wave.1 5412
+gui_wv_scroll_hslidermove -id  Wave.1 5544
+gui_wv_scroll_hslidermove -id  Wave.1 5676
+gui_wv_scroll_hslidermove -id  Wave.1 5940
+gui_wv_scroll_hslidermove -id  Wave.1 6072
+gui_zoom -window Wave.1 -full
+gui_marker_select -id  Wave.1 { C1 }
+gui_marker_move -id  Wave.1 C1 65000
+gui_wv_zoom_timerange -id  Wave.1 91312 200887
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_list_select -id Wave.1 -selected  { {tb_mem.wire_din[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_mem.wire_din[31:0]}  {tb_mem.wire_addr[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_mem.wire_din[31:0]}  {tb_mem.wire_addr[31:0]}  tb_mem.w_wr_en  tb_mem.done  {tb_mem.wire_dout[31:0]}   }
+gui_list_set_selected_property -id Wave.1 -radix binary
+gui_marker_move -id  Wave.1 C1 25287
+gui_marker_move -id  Wave.1 C1 15742
+gui_list_select -id Wave.1 -selected  { {tb_mem.wire_addr[31:0]}   }
+gui_list_select -id Wave.1 -selected  {  }
